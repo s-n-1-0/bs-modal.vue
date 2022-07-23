@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/s-n-1-0/bs-modal.vue/issues"
   },
-  "homepage": "https://github.com/s-n-1-0/bs-modal.vue#readme"
+  "homepage": "https://github.com/s-n-1-0/bs-modal.vue#readme",
+  "devDependencies": {
+    "@vue/cli": "^5.0.8"
+  }
 }
