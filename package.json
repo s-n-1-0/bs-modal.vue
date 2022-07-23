@@ -1,0 +1,24 @@
+{
+  "name": "bs-modal-vue",
+  "version": "1.0.0",
+  "description": "Use bootstrap modal with vue.",
+  "main": "bs-modal.vue",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/s-n-1-0/bs-modal.vue.git"
+  },
+  "keywords": [
+    "vue",
+    "bootstrap",
+    "vue3"
+  ],
+  "author": "s-n-1-0",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/s-n-1-0/bs-modal.vue/issues"
+  },
+  "homepage": "https://github.com/s-n-1-0/bs-modal.vue#readme"
+}
