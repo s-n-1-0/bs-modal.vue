@@ -2,7 +2,7 @@
   "name": "bs-modal-vue",
   "version": "1.0.0",
   "description": "Use bootstrap modal with vue.",
-  "main": "bs-modal.vue",
+  "main": "src/bs-modal.vue",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
