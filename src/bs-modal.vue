@@ -4,7 +4,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <slot name="header"></slot>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close" aria-label="Close" v-on:click="hideModal()"></button>
                 </div>
                 <div class="modal-body">
                     <slot></slot>
@@ -24,9 +24,18 @@ export default defineComponent({
         const modalRef = ref(null);
         return {
             modal:modalRef,
+            getModalInstance(){
+                const myModal = Modal.getInstance(modalRef.value);
+                if(myModal) return myModal;
+                return new Modal(modalRef.value);
+            },
             showModal(){
-                var myModal = new Modal(modalRef.value);
+                const myModal = this.getModalInstance();
                 myModal.show();
+            },
+            hideModal(){
+                const myModal = this.getModalInstance();
+                myModal.hide();
             }
         }
     }
