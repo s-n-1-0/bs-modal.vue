@@ -2,7 +2,8 @@
   "name": "bs-modal-vue",
   "version": "1.0.0",
   "description": "Use bootstrap modal with vue.",
-  "main": "src/bs-modal.vue",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc"
   },

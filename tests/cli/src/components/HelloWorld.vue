@@ -10,7 +10,7 @@
 
 <script lang="ts">
 import { defineComponent,ref } from 'vue';
-import modalComponent from "../../../../src/bs-modal.vue";
+import {bsModal} from "../../../../dist";
 export default defineComponent({
   name: 'HelloWorld',
   props: {
@@ -27,8 +27,7 @@ export default defineComponent({
     }
   },
   components:{
-    // eslint-disable-next-line vue/no-unused-components
-    "bs-modal":modalComponent
+    bsModal
   }
 });
 </script>
