@@ -4,7 +4,7 @@
   "description": "Use bootstrap modal with vue.",
   "main": "src/bs-modal.vue",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/s-n-1-0/bs-modal.vue#readme",
   "devDependencies": {
-    "@vue/cli": "^5.0.8"
+    "@vue/cli": "^5.0.8",
+    "typescript": "^4.5.4"
   }
 }
