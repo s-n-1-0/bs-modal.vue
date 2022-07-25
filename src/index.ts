@@ -1,2 +1,3 @@
 //@ts-ignore
-export {default as bsModal} from "../src/bs-modal.vue";
+export {default as BsModal} from "../src/bs-modal.vue";
+export * from "./interfaces/BsModal";
