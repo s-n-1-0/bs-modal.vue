@@ -1,6 +1,6 @@
 <template>
     <div class="modal fade" tabindex="-1" aria-hidden="true" ref="modal">
-        <div class="modal-dialog">
+        <div class="modal-dialog" :class="modalDialogClass">
             <div class="modal-content">
                 <div class="modal-header">
                     <slot name="header"></slot>
@@ -17,13 +17,28 @@
     </div>
 </template>
 <script>
-import { defineComponent,ref} from 'vue';
+import { computed, defineComponent,ref, toRefs} from 'vue';
 import {Modal} from "bootstrap";
 export default defineComponent({
-    setup(){
+    props:{
+        modalDialogSettings:{
+            default:[],
+            type:Array
+        }
+    },
+    setup(_props){
+        const {modalDialogSettings} = toRefs(_props);
+        const modalDialogClassRef = computed(()=>{
+            let c = {}
+            modalDialogSettings.value?.forEach(item=>{
+                c[item] = true
+            })
+            return c;
+        });
         const modalRef = ref(null);
         return {
             modal:modalRef,
+            modalDialogClass:modalDialogClassRef,
             getModalInstance(){
                 const myModal = Modal.getInstance(modalRef.value);
                 if(myModal) return myModal;
