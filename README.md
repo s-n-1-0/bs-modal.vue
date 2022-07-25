@@ -26,7 +26,7 @@ npm install bs-modal-vue
 </template>
 <script lang="ts">
 import { defineComponent,ref } from 'vue';
-import {bsModal} from "bs-modal-vue";
+import {BsModal} from "bs-modal-vue";
 export default defineComponent({
   name: 'HelloWorld',
   setup(){
@@ -40,8 +40,40 @@ export default defineComponent({
     }
   },
   components:{
-    bsModal
+    BsModal
   }
 });
 </script>
 ```
+### Options
++ Bootstrap5 docs
+  + https://getbootstrap.jp/docs/5.0/components/modal/
+
+#### Use Footer
+```vue
+<bs-modal>
+    <h1>Body</h1>
+  <template v-slot:footer>
+    <h1>Footer</h1>
+  </template>
+</bs-modal>
+```
+#### .modal Settings
+```vue
+<bs-modal data-bs-backdrop="static">
+  <h1> Static Backdrop</h1>
+</bs-modal>
+```
+
+#### .modal-dialog Settings
+```
+<bs-modal :modal-dialog-settings="['modal-fullscreen']">
+  <h1>Fullscreen!</h1>
+</bs-modal>
+```
+
+Others can be found here.
+  + https://github.com/s-n-1-0/bs-modal.vue/tree/main/tests/cli/src/components
+
+# PR / Issues
+Please PR or Issues if you have any questions.
