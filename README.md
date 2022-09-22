@@ -18,7 +18,7 @@ npm install bs-modal-vue
 <template>
   <div class="hello">
     <h1>Modal Samples</h1>
-    <bs-modal ref="bodyOnlyModalRef">
+    <bs-modal ref="bodyOnlyModalRef" class="fade">
       <h1>Body</h1>
     </bs-modal>
     <button type="button" class="btn btn-primary" v-on:click="showModal()">Show Modal</button>
@@ -56,6 +56,12 @@ export default defineComponent({
   <template v-slot:footer>
     <h1>Footer</h1>
   </template>
+</bs-modal>
+```
+#### Fade Animation
+```
+<bs-modal class="fade">
+    <h1>Body</h1>
 </bs-modal>
 ```
 #### .modal Settings
